@@ -1,16 +1,4 @@
-/*function getFirstSelector(selector) {
-  return document.querySelector(selector);
-}
 
-function nestedTarget(){
-  return document.getElementById("nested").querySelector(".target");
-}
- function increaseRankBy(n){
-   const lis = document.getElementById('app').querySelectorAll('ul.ranked-list li');
-   for (let i = 0; i < lis.length; i++) {
-  lis[i].innerHTML = parseInt(lis[i].innerHTML)+(n) ;
- }
- }*/
  function deepestChild(){
    const div = document.getElementById("grand-node").querySelectorAll("div") ;
    var test ;
@@ -31,11 +19,11 @@ function nestedTarget(){
  
 function increaseRankBy(n) {
   const rankedLists = document.querySelectorAll('.ranked-list')
-
-  for (let i = 0, l = rankedLists.length; i < l; i++) {
+  
+  for (let i = 0; i < rankedLists.length;  i++) {
     let children = rankedLists[i].children
 
-    for (let j = 0, k = children.length; j < k; j++) {
+    for (let j = 0; j < children.length;  j++) {
       children[j].innerHTML = parseInt(children[j].innerHTML) + n
     }
   }
